@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Task Tracker</h1>
+      <p id="summary" class="summary"></p>
+    </header>
+
+    <form id="add-form" autocomplete="off">
+      <input id="new-title" type="text" maxlength="120"
+             placeholder="What needs to be done?" aria-label="New task">
+      <button type="submit">Add</button>
+    </form>
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <nav class="filters" aria-label="Filter tasks">
+      <button type="button" data-filter="all" class="active">All</button>
+      <button type="button" data-filter="active">Active</button>
+      <button type="button" data-filter="done">Completed</button>
+    </nav>
+
+    <ul id="task-list"></ul>
+    <p id="empty" class="empty" hidden></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
